@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 {
 	if(argc <= 1)
 	{
-		printf("您还没有输入文件名。\n");
+		printf("鎮ㄨ繕娌℃湁杈撳叆鏂囦欢鍚嶏紝绋嬪簭鍗冲皢閫�鍑恒�俓n");
 		return 0;
 	}
 	//srcfile = fopen("src.txt","r");
