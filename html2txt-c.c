@@ -30,27 +30,13 @@ int calc_line(char* buffer)
 			//printstatus();
 			printf("%c",*(buffer));
 		}
-//paragraph
-		if(buffer[0] ==  'p' 
-		&& buffer[1] ==  'a'
-		&& buffer[2] ==  'r'
-		&& buffer[3] ==  'a'
-		&& buffer[4] ==  'g'
-		&& buffer[5] ==  'r'
-		&& buffer[6] ==  'a'
-		&& buffer[7] ==  'p'
-		&& buffer[8] ==  'h')
+////paragraph
+    if(!strncmp(buffer,"paragraph",strlen("paragraph")))
 		{
 			printf("\n");
 		}
 //heading
-		if(buffer[0] ==  'h' 
-		&& buffer[1] ==  'e'
-		&& buffer[2] ==  'a'
-		&& buffer[3] ==  'd'
-		&& buffer[4] ==  'i'
-		&& buffer[5] ==  'n'
-		&& buffer[6] ==  'g')
+    if(!strncmp(buffer,"heading",strlen("heading")))
 		{
 			printf("\n");
 		}
@@ -61,7 +47,7 @@ int main(int argc, char *argv[])
 {
 	if(argc <= 1)
 	{
-		printf("您还没有输入文件名，程序即将退出。\n");
+		printf("no file to input,program will exit.\n");
 		return 0;
 	}
 	//srcfile = fopen("src.txt","r");
