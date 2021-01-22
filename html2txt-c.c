@@ -4,6 +4,7 @@
 
 FILE *srcfile = NULL;
 #define printstatus() printf("%d,%d\n",index,inner)
+#define print_char(c) putchar(c)
 
 #define MAX_ASCII	10240
 char buffer[MAX_ASCII];
@@ -28,17 +29,17 @@ int calc_line(char* buffer)
 		if((inner == 0) && (*buffer != '>'))
 		{
 			//printstatus();
-			printf("%c",*(buffer));
+			print_char(*(buffer));
 		}
 ////paragraph
     if(!strncmp(buffer,"paragraph",strlen("paragraph")))
 		{
-			printf("\n");
+			print_char('\n');
 		}
 //heading
     if(!strncmp(buffer,"heading",strlen("heading")))
 		{
-			printf("\n");
+			print_char('\n');
 		}
 		buffer++;
 	}
